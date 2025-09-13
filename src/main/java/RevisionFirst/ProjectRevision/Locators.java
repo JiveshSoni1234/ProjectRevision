@@ -12,7 +12,7 @@ import java.util.List;
 
 public class Locators {
     // Using static email so it can be reused in signup + login
-    public static String email = "jivesh156@gmail.com";
+    public static String email = "jivesh157@gmail.com";
 
     public static void main(String args[]) throws InterruptedException {
         // ✅ ChromeOptions → to allow cross-origin access (important for some sites)
@@ -30,6 +30,10 @@ public class Locators {
         login(driver);
         sigup(driver);
         login(driver);
+        driver.navigate().to("https://www.youtube.com/");
+        driver.navigate().back();
+        driver.navigate().forward();
+        driver.quit();
     }
 
     // ================= SIGNUP =================
